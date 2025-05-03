@@ -1,0 +1,59 @@
+DESCRIPCION DE FUNCIONES DE UN REPOSITORIO
+
+GIT INIT
+El comando git init cumple la función de inicializar un nuevo repositorio de Git en el directorio actual. Es el primer paso para comenzar a usar Git en un proyecto que aún no está bajo control de versiones.
+
+GIT ADD .
+El comando git add . cumple la función de preparar todos los archivos modificados, nuevos o eliminados en el directorio actual (y subdirectorios) para ser incluidos en el próximo commit.
+
+GIT COMMIT -m ""
+
+El comando git commit -m "" sirve para guardar de forma permanente los cambios que han sido preparados (con git add) en el historial del repositorio, junto con un mensaje descriptivo del cambio.
+
+Partes del comando:
+
+    git commit: crea un nuevo commit con los archivos que están en el área de preparación (staging area).
+
+    -m "mensaje": permite agregar un mensaje directamente en la línea de comandos, sin abrir un editor de texto.
+
+GIT BRANCH -M MAIN
+El comando git branch -M main cumple la función de renombrar la rama actual a main, incluso si ya existe una rama llamada main.
+Detalle del comando:
+
+    git branch: comando para gestionar ramas en Git.
+
+    -M: es una opción que fuerza el cambio de nombre, sobrescribiendo si la rama de destino (main, en este caso) ya existe.
+
+    main: es el nuevo nombre que le quieres dar a la rama actual.
+
+¿Cuándo se usa?
+
+Este comando es común cuando:
+
+    Inicias un repositorio con git init, y la rama por defecto se llama master.
+
+    Quieres seguir la convención moderna de nombrar la rama principal como main.
+
+GIT REMOTE ADD ORIGIN 
+El comando git remote add origin <enlace> sirve para conectar tu repositorio local de Git con un repositorio remoto, generalmente en una plataforma como GitHub, GitLab o Bitbucket.
+Partes del comando:
+
+    git remote: gestiona las conexiones a repositorios remotos.
+
+    add: indica que quieres agregar una nueva conexión.
+
+    origin: es el nombre estándar (alias) que se le da al repositorio remoto principal.
+
+    <enlace>: es la URL del repositorio remoto, que puede ser HTTPS o SSH.
+
+GIT PUSH -U ORIGIN MAIN
+El comando git push -u origin main cumple la función de enviar los commits de tu rama local main al repositorio remoto llamado origin, y además establece una relación de seguimiento entre ambas ramas.
+Desglose del comando:
+
+    git push: envía los commits locales al repositorio remoto.
+
+    -u (abreviatura de --set-upstream): indica que quieres establecer una rama remota de seguimiento.
+
+    origin: el nombre del repositorio remoto (que configuraste con git remote add).
+
+    main: la rama local que estás empujando (y que se vinculará con la rama main del repositorio remoto).
